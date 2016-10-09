@@ -1,0 +1,12 @@
+*.sdf
+*.opensdf
+*.user
+
+Boggle/ipch/
+Boggle/Debug/
+Boggle/Boogle/Debug
+Boggle/Boogle/Release
+Boggle/Release
+
+
+
