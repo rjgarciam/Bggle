@@ -12,3 +12,7 @@ Boggle/Release
 
 
 *.log
+
+*.tlog
+
+Boggle/Boggle/input1.txt
