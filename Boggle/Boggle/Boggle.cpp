@@ -12,7 +12,7 @@ struct node{
 void insert(string word){
   node* current = head;
   current->prefix_count++;
-  for(unsigned int i=0; i<word.length();++i){
+  for(unsigned int i=0; i<word.length()-1;++i){
     int letter = (int)word[i] - (int)'a';
     if(current->child[letter] == NULL){
       current->child[letter] = new node();
@@ -83,7 +83,29 @@ int _tmain(int argc, _TCHAR* argv[])
   head = new node();
   head->prefix_count = 0;
   head->is_end = false;
-  
+
+  char input_line[100];
+  char *result;
+  int i=0,q;
+  string code, line, hash;
+
+  //<snip>
+
+  		cin >> code;
+			cin >> hash;
+
+  while((result = fgets(input_line, 100, stdin )) != NULL){
+    //si la longitud es más de 17, ni la cargues al trie.
+    insert(result);
+    ++i;
+  }    
+
+
+
+  cout << i << " lines read";
+  cout << "Adios" << endl;
+
+/*
   int option;
   while(1){
     cout << "Menu" << endl;
@@ -104,6 +126,7 @@ int _tmain(int argc, _TCHAR* argv[])
       cout << "Repeat" << endl;
     }
   }
+  */
 
 	return 0;
 }
